@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0 20px 20px;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 350%;
+    color: #fff;
+}
+
+h1 span{
+    font-weight: 200;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 1920px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9; /* Ensures images are rectangular with a 16:9 aspect ratio */
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+.img:hover {
+    transform: scale(1.50); /* Scale the image up slightly on hover */
+    /* position: static; */
+}
+
+/* Responsive styling */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
